@@ -72,8 +72,9 @@ See LeverageSaturation.xlsx for a spreadsheet that can be used to test different
 ```
 total stake: 23500000000
 a0: 0.3
-z0 (1/k): 0.002
 R: 20000000
+k (current): 500
+max_leverage (proposed): 50
 
 | Pool Stake | Pledge | Leverage | Pledge Benefit (current) | Total Rewards (current) | APY (current) | Pledge Benefit (proposed) | Total Rewards (proposed) | APY (proposed) |
 |------------|--------|----------|--------------------------|-------------------------|---------------|---------------------------|--------------------------|----------------|
