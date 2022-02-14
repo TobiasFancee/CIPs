@@ -76,6 +76,8 @@ R (rewards available in epoch): 30m
 k (current): 500
 max_leverage (proposed): 50
 
+Effect of new saturation mechanism on rewards (saturated versus unsaturated stake pools):
+
 | Pool Stake | Pledge | Leverage | Pledge Benefit (current) | Total Rewards (current) | APY (current) | Pledge Benefit (proposed) | Total Rewards (proposed) | APY (proposed) |
 |------------|--------|----------|--------------------------|-------------------------|---------------|---------------------------|--------------------------|----------------|
 | 70m        | 1m     | 70       | 208.38                   | 48791.37                | 5.2181%       | 208.21                    | 34910.35                 | 3.7068%        |
@@ -90,6 +92,17 @@ max_leverage (proposed): 50
 | 60m        | 500k   | 120      | 93.85                    | 41736.42                | 5.2072%       | 104.11                    | 17455.18                 | 2.1461%        |
 | 60m        | 250k   | 240      | 46.95                    | 41689.51                | 5.2012%       | 52.05                     | 8727.59                  | 1.0674%        |
 | 30m        | 250k   | 120      | 23.38                    | 20844.66                | 5.2012%       | 52.05                     | 8727.59                  | 2.1461%        |
+
+Effect of new pledge benefit on rewards (rewards up to saturation point):
+
+| Pool Stake | Pledge | Leverage | Pledge Benefit (current) | Total Rewards (current) | APY (current) | Pledge Benefit (proposed) | Total Rewards (proposed) | APY (proposed) |
+|------------|--------|----------|--------------------------|-------------------------|---------------|---------------------------|--------------------------|----------------|
+| 50m        | 1m     | 50       | 155.77                   | 34857.91                | 5.2191%       | 208.21                    | 34910.35                 | 5.2272%        |
+| 40m        | 1m     | 40       | 123.99                   | 27885.71                | 5.2190%       | 208.21                    | 27969.92                 | 5.2352%        |
+| 30m        | 1m     | 30       | 92.21                    | 20913.50                | 5.2188%       | 208.21                    | 21029.50                 | 5.2485%        |
+| 20m        | 1m     | 20       | 60.43                    | 13941.29                | 5.2184%       | 208.21                    | 14089.07                 | 5.2751%        |
+| 10m        | 1m     | 10       | 28.65                    | 6969.08                 | 5.2172%       | 208.21                    | 7148.64                  | 5.3551%        |
+| 1m         | 1m     | 1        | 0.05                     | 694.09                  | 5.1956%       | 208.21                    | 902.26                   | 6.8050%        |
 ```
 
 The results above were calculated assuming these stake pools charge no fees. (0% margin and 0 fixed fee)
