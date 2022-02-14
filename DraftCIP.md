@@ -92,7 +92,7 @@ max_leverage (proposed): 50
 | 30m        | 250k   | 120      | 23.38                    | 20844.66                | 5.2012%       | 52.05                     | 8727.59                  | 2.1461%        |
 ```
 
-The results above were calculated assuming these stake pools charged no fees. (0% margin and 0 fixed fee)
+The results above were calculated assuming these stake pools charge no fees. (0% margin and 0 fixed fee)
 
 Definitions: Pool Stake - Total stake delegated to a stake pool in ADA. Pledge -  Amount of stake pledged by a stake pool in ADA. Leverage - The ratio between Pool Stake and Pledge. Pledge Benefit -  The reward a stake pool earns for their pledge in ADA in a single epoch. Total Rewards - The total reward a stake pool earns in ADA in a single epoch (includes pledge benefit). APY - Annual Percentage Yield, the expected annual return on investment for staking represented as a percentage of the original investment.
 
