@@ -28,7 +28,7 @@ where max_leverage is any positive integer.
 
 The rewards calculation equation proposed:
 
-maxPool = (R / (1 + a0)) * (o +( s * a0))
+maxPool = (R / (1 + a0)) * (o +(s * a0))
 
 where: maxPool = maximum rewards for a stake pool, R = ((reserve * rho) + fees) * (1 - tau), o = min(poolstake / totalstake, satpoolratio) = satpoolratio for a fully saturated pool, and s = pledge / totalstake. Proposed value of parameter max_leverage: 50. Parameters rho, a0, and tao remain unchanged.
 
