@@ -67,7 +67,7 @@ The main concern with this proposal is the effect it will have on low pledge poo
 Due to the removal of parameters k and minPoolCost, this proposal is not backwards compatible. However, the rewards calculation equation is very similar to the calculation of current protocol, and no large difference in the performance of the rewards calculation is expected.
 
 ## Test Cases
-See LeverageSaturation.xlsx for a spreadsheet that can be used to test different values and compare the resulting rewards.
+See this [Google sheets] for a spreadsheet that can be used to test different values and compare the resulting rewards.
 
 ```
 total stake: 33.25b
@@ -113,3 +113,4 @@ As you can see, this proposal successfully gives low leverage stake pools much h
 
 [CIP 23]: <https://cips.cardano.org/cips/cip23/>
 [Conclave protocol]: <https://iohk.io/en/research/library/papers/conclavea-collective-stake-pool-protocol/>
+[Google sheets]: <https://docs.google.com/spreadsheets/d/183y_gxY2qqCIG0tSHv9rl6Ctew0X9U5Q/edit?usp=sharing&ouid=102080327491994835248&rtpof=true&sd=true>
