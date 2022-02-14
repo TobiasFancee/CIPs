@@ -32,7 +32,7 @@ maxPool = (R / (1 + a0)) * (o +( s * a0))
 
 where: maxPool = maximum rewards for a stake pool, R = ((reserve * rho) + fees) * (1 - tau), o = min(poolstake / totalstake, satpoolratio) = satpoolratio for a fully saturated pool, and s = pledge / totalstake. Proposed value of parameter max_leverage: 50. Parameters rho, a0, and tao remain unchanged.
 
-This modification to the rewards calculation equation removes one protocol parameter k and adds one new protocol parameter max_leverage. The proposed value for max_leverage is 50. However, this may be too aggressive. Community consensus should be reached so that this parameter is set thoughtfully.
+This modification to the rewards calculation equation removes one protocol parameter k and adds one new protocol parameter max_leverage. The proposed value for max_leverage is 50. However, this may be too aggressive. Community consensus should be reached so that this parameter is set thoughtfully. For implementation, max_leverage can be set high at first and then decreased incrementally to give delegators time to redelegate.
 
 In order for this proposal to work properly with pools with low pledge, the protocol stake pool fee parameters must also be changed.
 
@@ -45,7 +45,7 @@ In order for this proposal to work properly with pools with low pledge, the prot
 |-----------------------  |--------------------  |------------------------ |---------------   | ---------------------------- |
 ```
 
-This proposal removes the parameter minPoolCost from the protocol. A new parameter minPoolRate as described in [CIP 23] is added. The proposed value for minPoolRate in this proposal is 0.02. Any stake pool with a margin registered lower than minPoolRate will have its margin set to minPoolRate by the protocol when calculating delegator rewards.
+This proposal removes the parameter minPoolCost from the protocol. A new parameter minPoolRate as described in [CIP 23] is added. The proposed value for minPoolRate in this proposal is 0.02. Any stake pool with a margin registered lower than minPoolRate will have its margin set to minPoolRate by the protocol when calculating delegator rewards. If minPoolCost cannot be removed, then it should be set to zero.
 
 ## Rationale
 The current protocol allows for staking entities to achieve high leverage without any restrictions. As a result, many of the largest entities staking on Cardano operate with very high leverage leaving less opportunity for entities with smaller delegation. These high leverage “multipools” are made possible by operators splitting their pledge and operating multiple pools. The act of “pool splitting” bypasses the saturation mechanism of the current protocol. This mechanism is not influenced by an entity’s pledge or leverage. Instead, it is influenced by parameter k which is an arbitrary number representing an optimal number of pools on the network. As stated before, an optimal number of pools does not have any influence on the decentralization of the network, as it cannot control who runs these pools.
@@ -109,7 +109,7 @@ The results above were calculated assuming these stake pools charge no fees. (0%
 
 Definitions: Pool Stake - Total stake delegated to a stake pool in ADA. Pledge -  Amount of stake pledged by a stake pool in ADA. Leverage - The ratio between Pool Stake and Pledge. Pledge Benefit -  The reward a stake pool earns for their pledge in ADA in a single epoch. Total Rewards - The total reward a stake pool earns in ADA in a single epoch (includes pledge benefit). APY - Annual Percentage Yield, the expected annual return on investment for staking represented as a percentage of the original investment.
 
-As you can see, this proposal successfully gives low leverage stake pools much higher rewards than high leverage stake pools. You can also see that “pool splitting” is no longer an effective way to maximize rewards.
+As you can see, this proposal successfully gives low leverage stake pools much higher rewards than high leverage stake pools. This is achieved by both the proposed saturation mechanism and pledge benefit. You can also see that “pool splitting” is no longer an effective way to maximize rewards.
 
 [CIP 23]: <https://cips.cardano.org/cips/cip23/>
 [Conclave protocol]: <https://iohk.io/en/research/library/papers/conclavea-collective-stake-pool-protocol/>
