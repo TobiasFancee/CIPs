@@ -92,6 +92,8 @@ max_leverage (proposed): 50
 | 30M        | 250k   | 120      | 31.25                    | 19671.18                | 4.9014%       | 49.10                     | 8232.41                  | 2.0231%        |
 ```
 
+Definitions: Pool Stake - Total stake delegated to a stake pool in ADA. Pledge -  Amount of stake pledged by a stake pool in ADA. Leverage - The ratio between Pool Stake and Pledge. Pledge Benefit -  The reward a stake pool earns for their pledge in ADA in a single epoch. Total Rewards - The total reward a stake pool earns in ADA in a single epoch (includes pledge benefit). APY - Annual Percentage Yield, the expected annual return on investment for staking represented as a percentage of the original investment.
+
 As you can see, this proposal successfully gives low leverage stake pools much higher rewards than high leverage stake pools. You can also see that “pool splitting” is no longer an effective way to maximize rewards.
 
 [CIP 23]: <https://cips.cardano.org/cips/cip23/>
