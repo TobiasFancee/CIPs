@@ -1,3 +1,5 @@
+Here's the CIP I've been working on for a leverage-based saturation and pledge benenfit. I believe this proposal could make Cardano much more decentralized and end the MPO vs SPO debate. Tell me what you think. The Google sheets is just temporary for this post. The spreadsheet file will be part of the final pull request.
+
 ## Summary
 Modify the rewards calculation equation and protocol stake pool fee parameters to incentivize delegation to low leverage pools.
 
