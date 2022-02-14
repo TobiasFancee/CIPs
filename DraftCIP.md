@@ -70,27 +70,29 @@ Due to the removal of parameters k and minPoolCost, this proposal is not backwar
 See LeverageSaturation.xlsx for a spreadsheet that can be used to test different values and compare the resulting rewards.
 
 ```
-total stake: 23500000000
+total stake: 33250000000
 a0: 0.3
-R: 20000000
+R: 30000000
 k (current): 500
 max_leverage (proposed): 50
 
 | Pool Stake | Pledge | Leverage | Pledge Benefit (current) | Total Rewards (current) | APY (current) | Pledge Benefit (proposed) | Total Rewards (proposed) | APY (proposed) |
 |------------|--------|----------|--------------------------|-------------------------|---------------|---------------------------|--------------------------|----------------|
-| 70M        | 1M     | 70       | 198.44                   | 46024.96                | 4.9151%       | 196.40                    | 32929.62                 | 3.4929%        |
-| 10M        | 1M     | 10       | 38.50                    | 6585.14                 | 4.9229%       | 196.40                    | 6743.04                  | 5.0438%        |
-| 3M         | 1M     | 3        | 8.62                     | 1972.62                 | 4.9154%       | 196.40                    | 2160.39                  | 5.3956%        |
-| 70M        | 100k   | 700      | 19.66                    | 45846.17                | 4.8956%       | 19.64                     | 3292.96                  | 0.3440%        |
-| 10M        | 100k   | 100      | 4.15                     | 6550.79                 | 4.8966%       | 19.64                     | 3292.96                  | 2.4326%        |
-| 3M         | 100k   | 30       | 1.21                     | 1965.21                 | 4.8965%       | 19.64                     | 1983.63                  | 4.9436%        |
-| 70M        | 10k    | 7000     | 1.96                     | 45828.48                | 4.8937%       | 1.96                      | 329.30                   | 0.0343%        |
-| 10M        | 10k    | 1000     | 0.42                     | 6547.06                 | 4.8938%       | 1.96                      | 329.30                   | 0.2407%        |
-| 3M         | 10k    | 300      | 0.12                     | 1964.12                 | 4.8938%       | 1.96                      | 329.30                   | 0.8045%        |
-| 60M        | 500k   | 120      | 98.49                    | 39378.36                | 4.9060%       | 98.20                     | 16464.81                 | 2.0231%        |
-| 60M        | 250k   | 240      | 49.17                    | 39329.04                | 4.8997%       | 49.10                     | 8232.41                  | 1.0066%        |
-| 30M        | 250k   | 120      | 31.25                    | 19671.18                | 4.9014%       | 49.10                     | 8232.41                  | 2.0231%        |
+| 70M        | 1M     | 70       | 208.38                   | 48791.37                | 5.2181%       | 208.21                    | 34910.35                 | 3.7068%        |
+| 10M        | 1M     | 10       | 28.65                    | 6969.08                 | 5.2172%       | 208.21                    | 7148.64                  | 5.3551%        |
+| 3M         | 1M     | 3        | 6.40                     | 2088.53                 | 5.2116%       | 208.21                    | 2290.34                  | 5.7291%        |
+| 70M        | 100k   | 700      | 20.82                    | 48603.82                | 5.1975%       | 20.82                     | 3491.04                  | 0.3647%        |
+| 10M        | 100k   | 100      | 3.10                     | 6943.53                 | 5.1976%       | 20.82                     | 3491.04                  | 2.5808%        |
+| 3M         | 100k   | 30       | 0.91                     | 2083.04                 | 5.1975%       | 20.82                     | 2102.95                  | 5.2485%        |
+| 70M        | 10k    | 7000     | 2.08                     | 48585.08                | 5.1954%       | 2.08                      | 349.10                   | 0.0364%        |
+| 10M        | 10k    | 1000     | 0.31                     | 6940.74                 | 5.1954%       | 2.08                      | 349.10                   | 0.2552%        |
+| 3M         | 10k    | 300      | 0.09                     | 2082.22                 | 5.1954%       | 2.08                      | 349.10                   | 0.8531%        |
+| 60M        | 500k   | 120      | 93.85                    | 41736.42                | 5.2072%       | 104.11                    | 17455.18                 | 2.1461%        |
+| 60M        | 250k   | 240      | 46.95                    | 41689.51                | 5.2012%       | 52.05                     | 8727.59                  | 1.0674%        |
+| 30M        | 250k   | 120      | 23.38                    | 20844.66                | 5.2012%       | 52.05                     | 8727.59                  | 2.1461%        |
 ```
+
+The results above were calculated assuming these stake pools charged no fees. (0% margin and 0 fixed fee)
 
 Definitions: Pool Stake - Total stake delegated to a stake pool in ADA. Pledge -  Amount of stake pledged by a stake pool in ADA. Leverage - The ratio between Pool Stake and Pledge. Pledge Benefit -  The reward a stake pool earns for their pledge in ADA in a single epoch. Total Rewards - The total reward a stake pool earns in ADA in a single epoch (includes pledge benefit). APY - Annual Percentage Yield, the expected annual return on investment for staking represented as a percentage of the original investment.
 
